@@ -1,0 +1,203 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+:root {
+    --very-dark-magenta: hsl(300, 43%, 22%);
+    --soft-pink: hsl(333, 80%, 67%);
+
+    --dark-grayish-magenta: hsl(303, 10%, 53%);
+    --light-grayish-magenta: hsl(300, 24%, 96%);
+    --white: hsl(0, 0%, 100%);
+}
+
+body {
+    font-family: 'League Spartan', sans-serif;
+    background-image: url(images/bg-pattern-top-mobile.svg), url(images/bg-pattern-bottom-mobile.svg);
+    background-position: left top, right bottom;
+    background-repeat: no-repeat, no-repeat;
+}
+
+.main-content {
+    margin: 1.5rem auto;
+    max-width: 375px;
+}
+
+.topper {
+    display: flexbox;
+    text-align: center;
+}
+
+.topper h1 {
+    padding: 3rem 3rem 1rem;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--very-dark-magenta);
+}
+
+.topper p {
+    color: var(--dark-grayish-magenta);
+    font-weight: 500;
+    line-height: 1.2rem;
+    font-size: 20px;
+}
+
+.rating-side {
+    margin: 2rem 0rem 2rem;
+}
+
+.single-rating {
+    background-color: var(--light-grayish-magenta);
+    padding: 1rem 2rem 1rem;
+    border-radius: 16px;
+    margin: 1rem 0rem 1rem;
+}
+
+.single-rating p {
+    margin-top: .5rem;
+    color: var(--very-dark-magenta);
+    font-weight: 700;
+}
+
+.comment-area {
+    display: flexbox;
+}
+
+.comment {
+    background-color: var(--very-dark-magenta);
+    padding: 2.5rem 2rem 2.5rem;
+    border-radius: 16px;
+    margin-bottom: 2rem;
+}
+
+.user {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.user img {
+    height: 48px;
+    border-radius: 24px;
+    margin-right: 1.5rem;
+}
+
+.name {
+    color: var(--white);
+    font-weight: 700;
+    margin-bottom: .2rem;
+}
+
+.verified {
+    color: var(--soft-pink);
+}
+
+.commentery {
+    color: var(--white);
+    font-weight: 400;
+    line-height: 1.5rem;
+    font-size: larger;
+}
+
+@media (min-width: 768px) {
+
+    body {
+        background-image: url(images/bg-pattern-top-desktop.svg), url(images/bg-pattern-bottom-desktop.svg);
+        background-position: left top, right bottom;
+        background-repeat: no-repeat, no-repeat;
+        min-height: 100vh;
+        width: 100%;
+    }
+
+    .main-content {
+        max-width: 1440px;
+        min-width: 780px;
+        margin: 5rem auto 5rem;
+        padding: 1rem;
+    }
+
+    .topper {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-bottom: 5rem;
+    }
+
+    .text-side {
+        justify-content: flex-start;
+        text-align: start;
+        width: 35%;
+    }
+
+    .topper h1 {
+        font-size: 48px;
+        padding: 0;
+        margin-right: 25%;
+        margin-bottom: 3rem;
+    }
+
+    .rating-side {
+        display: flex;
+        flex-direction: column;
+        margin-top: 1rem;
+        margin-left: 30%;
+        width: 50%;
+
+    }
+
+    .rating-side div:first-child {
+        align-self: flex-start;
+    }
+
+    .rating-side div:nth-child(2) {
+        align-self: center;
+    }
+
+    .rating-side div:last-child {
+        align-self: flex-end;
+    }
+
+    .single-rating {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        max-width: 380px;
+        margin: .5rem 0rem .5rem;
+
+    }
+
+    .single-rating p {
+        margin: 0;
+    }
+
+    .comment-area {
+        display: flex;
+        gap: 3rem
+    }
+
+    .comment {
+        height: 200px
+    }
+
+    .comment-area .comment:nth-child(2) {
+        margin-top: 2rem;
+    }
+
+    .comment-area .comment:last-child {
+        margin-top: 4rem;
+    }
+
+    .user-info {
+        margin: 0;
+    }
+}
